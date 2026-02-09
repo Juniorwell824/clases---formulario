@@ -12,7 +12,7 @@ import {
   Box,
   Alert,
   CircularProgress,
-  Fade
+  Link
 } from '@mui/material';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebase/config';
@@ -23,6 +23,8 @@ import InfoIcon from '@mui/icons-material/Info';
 import SchoolIcon from '@mui/icons-material/School';
 import SecurityIcon from '@mui/icons-material/Security';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { Link as RouterLink } from 'react-router-dom';
 import './FormularioPublico.css';
 
 const schema = yup.object({
@@ -104,6 +106,17 @@ const FormularioPublico = () => {
               </Typography>
             </div>
           </Box>
+          
+          {/* Botón para ir al login */}
+          <Button
+            component={RouterLink}
+            to="/login"
+            variant="contained"
+            className="login-button"
+            startIcon={<LockOutlinedIcon />}
+          >
+            Acceso al Sistema
+          </Button>
         </Paper>
 
         <Box className="form-content-container">
@@ -338,6 +351,16 @@ const FormularioPublico = () => {
             © {new Date().getFullYear()} Academia Para Adultos - Programa de Educación Continua. 
             Todos los derechos reservados. 
           </Typography>
+          
+          <Button
+            component={RouterLink}
+            to="/login"
+            variant="text"
+            className="login-link"
+            startIcon={<LockOutlinedIcon />}
+          >
+            Acceso para Socios y Administradores
+          </Button>
         </Box>
       </Container>
     </Box>

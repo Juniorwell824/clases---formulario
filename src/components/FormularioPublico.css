@@ -491,3 +491,38 @@
 .form-panel {
   animation-delay: 0.2s;
 }
+
+/* Estilos para el botón de login */
+.login-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-color: #1976d2;
+  color: #1976d2;
+  font-weight: 600;
+  text-transform: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+  border-color: #115293;
+  transform: translateY(-2px);
+}
+
+.academic-header {
+  position: relative;
+  padding: 30px 40px !important;
+}
+
+/* O si prefieres en el pie de página, puedes agregarlo en la sección del copyright */
+.footer-with-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
